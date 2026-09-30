@@ -103,7 +103,7 @@
    "lowland_pct": 23.6,
    "mining_sites": 4,
    "mining_ha": 12.0,
-   "reported_sites": 39,
+   "reported_sites": 38,
    "by_day": {
     "26": {
      "sites": 4,
@@ -112,20 +112,20 @@
      "new": 4
     },
     "27": {
-     "sites": 29,
-     "fatal": 6,
+     "sites": 28,
+     "fatal": 5,
      "severe": 5,
-     "new": 25
+     "new": 24
     },
     "28": {
-     "sites": 38,
-     "fatal": 9,
+     "sites": 37,
+     "fatal": 8,
      "severe": 5,
      "new": 9
     },
     "29": {
-     "sites": 39,
-     "fatal": 10,
+     "sites": 38,
+     "fatal": 9,
      "severe": 5,
      "new": 1
     }
@@ -1337,7 +1337,7 @@
    "hospital_names": [
     "Tha Kyet Taw Station Hospital"
    ],
-   "reported_sites": 18,
+   "reported_sites": 17,
    "reported_ids": [
     "sit-pyay",
     "nyin-maw",
@@ -1346,7 +1346,6 @@
     "gawt-inn",
     "auk-yay-phyu",
     "ka-det-gyi",
-    "ka-det-nge",
     "ka-det-nge-htein",
     "ka-det-nge-seik",
     "taw-kye",
@@ -1358,7 +1357,7 @@
     "nyaw-pyin",
     "kyet-hlut"
    ],
-   "fatal": 5,
+   "fatal": 4,
    "red": 4,
    "area_km2": 387.0
   },

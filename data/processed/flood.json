@@ -53,7 +53,7 @@
    "kind": "News",
    "sites": [
     "ka-myaw-gyi",
-    "ka-det-nge",
+    "ka-det-nge-htein",
     "ka-det-nge-seik",
     "tha-kyet-taw",
     "za-lut",
@@ -110,7 +110,6 @@
     "gawt-inn",
     "auk-yay-phyu",
     "ka-det-gyi",
-    "ka-det-nge",
     "ka-det-nge-htein",
     "taw-kye",
     "tha-pyay-shaung",
@@ -129,14 +128,14 @@
    "h": 651,
    "day": 27,
    "as_of": "27 Sep, midday",
-   "en": "Kadet Nge landslide: about 10 missing, bodies of a child and a woman found",
+   "en": "Kadet Nge [Htein] landslide: about 10 missing, bodies of a child and a woman found",
    "id": "P06",
    "mm": "လောင်းလုံး ကဒက်ငယ်ရွာ တောင်ပြိုမှု လူ ၁၀ ခန့်ပျောက်နေ၊ ကလေးငယ်တစ်ဦးနှင့် အမျိုးသမီးတစ်ဦး အလောင်းတွေ့",
    "byline": "Dawei Watch | စက်တင်ဘာ ၂၇",
    "kind": "News",
    "sites": [
     "auk-yay-phyu",
-    "ka-det-nge"
+    "ka-det-nge-htein"
    ],
    "incidents": []
   },
@@ -258,7 +257,6 @@
     "min-yat",
     "thea-pon",
     "auk-yay-phyu",
-    "ka-det-nge",
     "ka-det-nge-htein",
     "ka-det-nge-seik",
     "nyaw-pyin",
@@ -426,7 +424,7 @@
    "kind": "News",
    "sites": [
     "launglon-town",
-    "ka-det-nge",
+    "ka-det-nge-htein",
     "za-lut",
     "za-lut-pyin-gyi",
     "ti-zit",
@@ -691,7 +689,7 @@
    "sites": [
     "tha-byar",
     "nyin-maw",
-    "ka-det-nge",
+    "ka-det-nge-htein",
     "kayin-gyi",
     "maungmagan",
     "dawei-town",
@@ -2427,7 +2425,7 @@
     {
      "line": 657,
      "sev": "affected",
-     "text": "Some Kadet Nge residents have moved here, a little over a mile away.",
+     "text": "Some Kadet Nge [Htein] residents have moved here, a little over a mile away.",
      "roles": [
       "relief"
      ],
@@ -2641,21 +2639,19 @@
    "roles": []
   },
   {
-   "id": "ka-det-nge",
-   "mm": "ကဒက်ငယ်",
-   "en": "Ka Det Nge",
+   "id": "ka-det-nge-htein",
+   "mm": "ကဒက်ငယ်ထိန်",
+   "en": "Ka Det Nge Htein",
    "ts": "Launglon",
    "area": "Launglon south",
    "hazard": "landslide",
-   "alias_mm": "ကဒက်ငယ်ကြီး",
-   "match": "approx",
-   "approx_vt": "Ka Det Nge Seik",
-   "match_note": "Not in MIMU village points. Shown at the centre of Ka Det Nge Seik village tract; the posts put it about three miles south of Launglon town. The 9:30 am post of 27 Sep calls it ကဒက်ငယ်ကြီး (Ka Det Nge Gyi), taken here as the same village.",
+   "alias_mm": "ကဒက်ငယ် · ကဒက်ငယ်ကြီး",
+   "merge_note": "Some posts call it ကဒက်ငယ် (Ka Det Nge), and the 9:30 am post of 27 Sep ကဒက်ငယ်ကြီး (Ka Det Nge Gyi). Local residents confirmed these are Ka Det Nge Htein, so those reports are merged here and its figures are not counted twice.",
    "reports": [
     {
      "line": 719,
      "sev": "severe",
-     "text": "Designated red level. Rescue teams had not reached it by 9:30 am on 27 Sep.",
+     "text": "Designated red level (as Kadet Nge Gyi). Rescue teams had not reached it by 9:30 am on 27 Sep.",
      "red": true,
      "rescue": "not-reached",
      "post": "P03",
@@ -2680,6 +2676,14 @@
      "roles": []
     },
     {
+     "line": 671,
+     "sev": "severe",
+     "text": "Landslides and flooding.",
+     "post": "P05",
+     "day": 27,
+     "roles": []
+    },
+    {
      "line": 653,
      "sev": "fatal",
      "text": "About 10 residents buried in their houses by the landslide. The bodies of a child and a woman have been found; villagers are searching for the rest themselves.",
@@ -2694,110 +2698,6 @@
      "sev": "fatal",
      "text": "Heavy loss of life and property; tens of people missing, about 10 still missing after two bodies were recovered.",
      "post": "P13",
-     "day": 27,
-     "roles": []
-    },
-    {
-     "line": 422,
-     "sev": "fatal",
-     "text": "Among the villages with deaths; red level.",
-     "red": true,
-     "post": "P21",
-     "day": 28,
-     "roles": []
-    },
-    {
-     "line": 424,
-     "sev": "fatal",
-     "text": "Rescue teams from Dawei had still not reached it on the morning of 28 Sep.",
-     "rescue": "not-reached",
-     "post": "P21",
-     "day": 28,
-     "roles": []
-    },
-    {
-     "line": 163,
-     "sev": "fatal",
-     "text": "A rescue volunteer names Kadet Nge the worst hit, with the most deaths.",
-     "post": "P35",
-     "day": 28,
-     "roles": []
-    }
-   ],
-   "lon": 98.19345,
-   "lat": 13.90308,
-   "pcode": "MMR006002021",
-   "mimu_name": "Ka Det Nge Seik (village tract)",
-   "mimu_mm": "ကဒက်ငယ်ဆိပ်",
-   "first_day": 27,
-   "state": {
-    "26": null,
-    "27": {
-     "sev": "fatal",
-     "red": true,
-     "rescue": "not-reached",
-     "roles": [],
-     "figs": {
-      "depth_ft": 3,
-      "dead": 2,
-      "missing": 10
-     },
-     "n": 5,
-     "new": [
-      "P03",
-      "P05",
-      "P05",
-      "P06",
-      "P13"
-     ]
-    },
-    "28": {
-     "sev": "fatal",
-     "red": true,
-     "rescue": "not-reached",
-     "roles": [],
-     "figs": {
-      "depth_ft": 3,
-      "dead": 2,
-      "missing": 10
-     },
-     "n": 8,
-     "new": [
-      "P21",
-      "P21",
-      "P35"
-     ]
-    },
-    "29": {
-     "sev": "fatal",
-     "red": true,
-     "rescue": "not-reached",
-     "roles": [],
-     "figs": {
-      "depth_ft": 3,
-      "dead": 2,
-      "missing": 10
-     },
-     "n": 8,
-     "new": []
-    }
-   },
-   "sev": "fatal",
-   "roles": []
-  },
-  {
-   "id": "ka-det-nge-htein",
-   "mm": "ကဒက်ငယ်ထိန်",
-   "en": "Ka Det Nge Htein",
-   "ts": "Launglon",
-   "area": "Launglon south",
-   "hazard": "landslide",
-   "reports": [
-    {
-     "line": 671,
-     "sev": "severe",
-     "text": "Landslides and flooding.",
-     "post": "P05",
      "day": 27,
      "roles": []
     },
@@ -2818,6 +2718,24 @@
      "missing_text": "dozens",
      "post": "P14",
      "day": 27,
+     "roles": []
+    },
+    {
+     "line": 422,
+     "sev": "fatal",
+     "text": "Among the villages with deaths; red level.",
+     "red": true,
+     "post": "P21",
+     "day": 28,
+     "roles": []
+    },
+    {
+     "line": 424,
+     "sev": "fatal",
+     "text": "Rescue teams from Dawei had still not reached it on the morning of 28 Sep.",
+     "rescue": "not-reached",
+     "post": "P21",
+     "day": 28,
      "roles": []
     },
     {
@@ -2886,6 +2804,14 @@
      "roles": []
     },
     {
+     "line": 163,
+     "sev": "fatal",
+     "text": "A rescue volunteer names it the worst hit, with the most deaths.",
+     "post": "P35",
+     "day": 28,
+     "roles": []
+    },
+    {
      "line": 124,
      "sev": "fatal",
      "text": "Red level; the search for the missing continues on 29 Sep.",
@@ -2918,17 +2844,23 @@
     "26": null,
     "27": {
      "sev": "fatal",
-     "red": false,
-     "rescue": null,
+     "red": true,
+     "rescue": "not-reached",
      "roles": [],
      "figs": {
-      "houses": 50,
+      "depth_ft": 3,
       "dead": 2,
+      "houses": 50,
       "missing_text": "dozens"
      },
-     "n": 3,
+     "n": 8,
      "new": [
+      "P03",
       "P05",
+      "P05",
+      "P05",
+      "P06",
+      "P13",
       "P13",
       "P14"
      ]
@@ -2939,19 +2871,23 @@
      "rescue": "reached",
      "roles": [],
      "figs": {
-      "houses": 31,
+      "depth_ft": 3,
       "dead": 5,
+      "houses": 31,
       "missing_text": "dozens"
      },
-     "n": 10,
+     "n": 18,
      "new": [
+      "P21",
+      "P21",
       "P23",
       "P23",
       "P25",
       "P31",
       "P31",
       "P32",
-      "P33"
+      "P33",
+      "P35"
      ]
     },
     "29": {
@@ -2960,11 +2896,12 @@
      "rescue": "reached",
      "roles": [],
      "figs": {
-      "houses": 31,
+      "depth_ft": 3,
       "dead": 10,
-      "missing": 3
+      "missing": 3,
+      "houses": 31
      },
-     "n": 12,
+     "n": 20,
      "new": [
       "P38",
       "P43"
@@ -11000,7 +10937,7 @@
    "area": "Launglon",
    "line": 422,
    "kind": "toll",
-   "en": "At least five bodies recovered in Launglon; dozens still missing. Rescuers have not reached Kadet Nge, Ti Zit or Za Lut.",
+   "en": "At least five bodies recovered in Launglon; dozens still missing. Rescuers have not reached Kadet Nge [Htein], Ti Zit or Za Lut.",
    "post": "P21"
   },
   {
@@ -11221,9 +11158,9 @@
    "post": "P02"
   },
   {
-   "site": "ka-det-nge",
+   "site": "ka-det-nge-htein",
    "line": 656,
-   "by": "Kadet Nge resident, 27 Sep",
+   "by": "Kadet Nge [Htein] resident, 27 Sep",
    "mm": "သေတဲ့သူတွေ မနည်းဘူး။ နှစ်လောင်းပဲ ထုတ်လို့ရသေးတယ်",
    "en": "So many are dead. We've only been able to bring out two bodies.",
    "post": "P06"
@@ -11423,9 +11360,9 @@
  ],
  "match_grades": {
   "exact": 82,
-  "approx": 5,
   "probable": 3,
   "variant": 6,
-  "unlocated": 6
+  "unlocated": 6,
+  "approx": 4
  }
 }

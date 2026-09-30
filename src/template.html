@@ -793,7 +793,7 @@ const ST_ICON = {
 const ST_LABEL = { cut: "Cut", needed: "Needed", disrupted: "Disrupted", working: "Reached / working" };
 
 /* ------------------------------------------------------------------ figures */
-const FIG_PRE = { "ka-det-nge:missing": "~", "kayin-gyi:houses": "~", "auk-yay-phyu:sheltering": "~", "kayin-gyi:sheltering": "~",
+const FIG_PRE = { "kayin-gyi:houses": "~", "auk-yay-phyu:sheltering": "~", "kayin-gyi:sheltering": "~",
   "kyauk-ni-maw:houses": "~", "ti-zit:houses": "~" };
 const FIG_POST = { "nyaw-pyin:houses": "+", "kyauk-ni-maw:missing": "+", "kyauk-ni-maw:sheltering": "+", "dawei-town:sheltering": "+" };
 const fv = (s, k, v) => (FIG_PRE[s.id + ":" + k] || "") + fmt(v) + (FIG_POST[s.id + ":" + k] || "");
@@ -1209,6 +1209,7 @@ function renderDetail() {
     <dl class="kv">
       <dt>Location</dt><dd>${esc(MATCH_LABEL[s.match])}${s.mimu_name ? ` · ${esc(s.mimu_name)}` : ""}${s.mimu_mm && s.mimu_mm !== s.mm ? ` <span class="mm">(${esc(s.mimu_mm)})</span>` : ""}</dd>
       ${s.match_note ? `<dt></dt><dd>${esc(s.match_note)}</dd>` : ""}
+      ${s.merge_note ? `<dt>Also named</dt><dd>${esc(s.merge_note)}</dd>` : ""}
       ${s.vt ? `<dt>Village tract</dt><dd>${esc(s.vt)}</dd>` : ""}
       ${s.pcode ? `<dt>MIMU PCode</dt><dd class="num">${esc(s.pcode)}</dd>` : ""}
       ${nearest ? `<dt>Nearest hospital</dt><dd>${esc(nearest.name)} · ${nearest.d.toFixed(1)} km straight line</dd>` : ""}
@@ -1410,7 +1411,7 @@ const T = AN.townships;
   const tx = s => (new Date(s + "Z").getTime() - t0) / (t1 - t0);
   const notes = [
     { t: "2026-09-26T18:00", l: "Kyauk Ni Maw: some missing" },
-    { t: "2026-09-27T12:00", l: "Kadet Nge: ~10" },
+    { t: "2026-09-27T12:00", l: "Kadet Nge Htein: ~10" },
     { t: "2026-09-27T19:00", l: "Kadet Nge Htein: dozens" },
     { t: "2026-09-28T19:30", l: "Kadet Nge Htein: 13 in all" },
     { t: "2026-09-29T12:00", l: "15 named; dozens in all" },
@@ -1724,7 +1725,7 @@ const TOWNS = [["Dawei", "--s1"], ["Launglon", "--s2"], ["Thayetchaung", "--s3"]
       ${cols.map(c => `<td>${cell(c, s)}</td>`).join("")}
       <td style="min-width:230px;color:var(--ink-2);font-size:12.5px">${dayPill(last.day)} ${esc(last.text)}</td></tr>`; }).join("")}</tbody>`;
   $$("#ledger tr.clickable").forEach(tr => { const go = () => { select(tr.dataset.id); goMap(); }; tr.addEventListener("click", go); tr.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } }); });
-  $("#ledgerNote").textContent = "Each row shows the latest figure the posts gave. “About 10 missing” at Kadet Nge (27 Sep) probably describes some of the same people as Kadet Nge Htein's count, as may the two bodies first reported there. Kyauk Ni Maw's counts disagree from post to post (see the round-up chart above). Kayin Gyi grew from about 30 houses on 27 Sep to the whole eastern half of the village on 28 Sep. The ten rescued in Dawei were near the Taik Thit monastery, shown in Ka Nyon ward.";
+  $("#ledgerNote").textContent = "Each row shows the latest figure the posts gave. Kadet Nge Htein includes the posts that call it Kadet Nge, so its early “about 10 missing” and two bodies are the same people as its later counts, not extra ones. Kyauk Ni Maw's counts disagree from post to post (see the round-up chart above). Kayin Gyi grew from about 30 houses on 27 Sep to the whole eastern half of the village on 28 Sep. The ten rescued in Dawei were near the Taik Thit monastery, shown in Ka Nyon ward.";
 })();
 
 /* -------- townships */
@@ -1839,7 +1840,7 @@ const TOWNS = [["Dawei", "--s1"], ["Launglon", "--s2"], ["Thayetchaung", "--s3"]
   $("#method").innerHTML = `
     <div>
       <h3>From posts to map</h3>
-      <p>The ${POSTS.length} posts Dawei Watch published on 26–29 Sep were split into one paragraph per line. Every place, figure, quote and event on this page cites a line of that file. Each place was matched by its Myanmar-script name to the MIMU village points within the township the post names; towns use MIMU town points and town wards use MIMU ward boundaries (v9.4). A place's state on a given day is built only from posts published by then, so switching the map to an earlier day shows what was known at the time. A blue arrow on a marker means the latest post there says the water is falling.</p>
+      <p>The ${POSTS.length} posts Dawei Watch published on 26–29 Sep were split into one paragraph per line. Every place, figure, quote and event on this page cites a line of that file. Each place was matched by its Myanmar-script name to the MIMU village points within the township the post names; towns use MIMU town points and town wards use MIMU ward boundaries (v9.4). A place's state on a given day is built only from posts published by then, so switching the map to an earlier day shows what was known at the time. Posts that name ကဒက်ငယ် (Kadet Nge) are counted under Kadet Nge Htein, which local residents confirmed is the same village. A blue arrow on a marker means the latest post there says the water is falling.</p>
       <div style="margin-top:10px">${gradeRows.map(([k, d]) => `<div class="grade"><b>${k}</b><span class="c">${gr[k] || 0}</span><span class="d">${d}</span></div>`).join("")}</div>
     </div>
     <div>

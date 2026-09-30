@@ -16,7 +16,7 @@ page is served normally. The 26–28 Sep edition is at
 - Headline figures as of 29 Sep: 23 dead (Dawei Watch count), the missing the round-up
   names, red-level villages, houses buried or wrecked, people in shelters, and the second
   rainfall record in two days (346 mm at Dawei on the 28 Sep reading).
-- Map with a **26 / 27 / 28 / 29 Sep switch**: each of 102 places shows what had been
+- Map with a **26 / 27 / 28 / 29 Sep switch**: each of 101 places shows what had been
   reported by the end of that day (colour = what happened to people, shape = hazard,
   ring = red level, blue arrow = water reported falling). Also: cut or flooded roads and
   bridges, junta troop movements the posts report, the rescue convoy's route, the area
@@ -59,11 +59,13 @@ published figures. Never hand-edit `index.html`; edit `src/template.html` and re
   the conflicts.
 - The 17 ft mark on the Tanintharyi River is its alert level and 24 ft its danger level
   (29 Sep post); the 26–28 Sep edition called 17 ft the danger mark.
-- Geocoding grades (in `flood.json`): 82 exact, 6 variant, 3 probable, 5 approximate,
+- Geocoding grades (in `flood.json`): 82 exact, 6 variant, 3 probable, 4 approximate,
   6 not found in MIMU.
 - MIMU: boundaries v9.4, village points, wards v9.4, health facilities 2020 (hospitals
   only), formal schools 2019, roads 1:250k, bridges, mining areas, land below 5 m,
   industrial zones 2024. Area of interest: Dawei District, Palaw, Tanintharyi and Bokpyin.
+- Ka Det Nge (ကဒက်ငယ်) in the posts is Ka Det Nge Htein (ကဒက်ငယ်ထိန်), as local residents confirmed; its
+  reports are merged into that village at its MIMU point.
 - Rainfall curves are Open-Meteo model output, not gauges.
 
 ## Deployment

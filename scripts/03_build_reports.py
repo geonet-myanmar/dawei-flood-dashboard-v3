@@ -68,7 +68,7 @@ POSTS = [
     dict(h=658, day=27, as_of="27 Sep, late morning",
          en="About 20 villages flooded in Launglon, hills collapse, at least two missing including a child"),
     dict(h=651, day=27, as_of="27 Sep, midday",
-         en="Kadet Nge landslide: about 10 missing, bodies of a child and a woman found"),
+         en="Kadet Nge [Htein] landslide: about 10 missing, bodies of a child and a woman found"),
     dict(h=645, day=27, as_of="27 Sep, midday",
          en="Min Yat landslide buries mother and child; mother dies, rescuers still working to free the child"),
     dict(h=632, day=27, as_of="27 Sep",
@@ -258,7 +258,7 @@ SITES = [
                     "MIMU's village 1.6 km from Kadet Nge Htein.",
          reports=[
              R(663, "affected", LIST27),
-             R(657, "affected", "Some Kadet Nge residents have moved here, a little over a mile away.",
+             R(657, "affected", "Some Kadet Nge [Htein] residents have moved here, a little over a mile away.",
                roles=["relief"]),
              R(563, "severe", "An emergency camp at the village school and on the pagoda hill shelters about "
                               "500 flood victims, who need help.", sheltering=500, roles=["relief", "needs", "school"]),
@@ -270,14 +270,17 @@ SITES = [
              R(735, "affected", "People living near the hills have packed their belongings; some are moving out."),
              R(663, "affected", LIST27),
          ]),
-    dict(id="ka-det-nge", mm="ကဒက်ငယ်", en="Ka Det Nge", ts="Launglon", area="Launglon south",
-         hazard="landslide", alias_mm="ကဒက်ငယ်ကြီး", match="approx", approx_vt="Ka Det Nge Seik",
-         match_note="Not in MIMU village points. Shown at the centre of Ka Det Nge Seik village tract; the "
-                    "posts put it about three miles south of Launglon town. The 9:30 am post of 27 Sep calls "
-                    "it ကဒက်ငယ်ကြီး (Ka Det Nge Gyi), taken here as the same village.",
+    # Several posts call it ကဒက်ငယ် (Ka Det Nge), once ကဒက်ငယ်ကြီး; local residents confirmed that this is Ka Det
+    # Nge Htein, so those reports are here. Figures are read, never summed, across reports (see main()), so
+    # the two bodies and "about 10 missing" of 27 Sep are not counted again on top of this village's own.
+    dict(id="ka-det-nge-htein", mm="ကဒက်ငယ်ထိန်", en="Ka Det Nge Htein", ts="Launglon",
+         area="Launglon south", hazard="landslide", alias_mm="ကဒက်ငယ် · ကဒက်ငယ်ကြီး",
+         merge_note="Some posts call it ကဒက်ငယ် (Ka Det Nge), and the 9:30 am post of 27 Sep ကဒက်ငယ်ကြီး (Ka Det Nge "
+                    "Gyi). Local residents confirmed these are Ka Det Nge Htein, so those reports are merged here "
+                    "and its figures are not counted twice.",
          reports=[
-             R(719, "severe", "Designated red level. Rescue teams had not reached it by 9:30 am on 27 Sep.",
-               red=True, rescue="not-reached"),
+             R(719, "severe", "Designated red level (as Kadet Nge Gyi). Rescue teams had not reached it by 9:30 am on "
+                              "27 Sep.", red=True, rescue="not-reached"),
              R(663, "severe", LIST27),
              R(653, "fatal", "About 10 residents buried in their houses by the landslide. The bodies of a child "
                              "and a woman have been found; villagers are searching for the rest themselves.",
@@ -288,9 +291,6 @@ SITES = [
              R(422, "fatal", "Among the villages with deaths; red level.", red=True),
              R(424, "fatal", "Rescue teams from Dawei had still not reached it on the morning of 28 Sep.",
                rescue="not-reached"),
-         ]),
-    dict(id="ka-det-nge-htein", mm="ကဒက်ငယ်ထိန်", en="Ka Det Nge Htein", ts="Launglon",
-         area="Launglon south", hazard="landslide", reports=[
              R(671, "severe", "Landslides and flooding."),
              R(536, "fatal", "By the evening of 27 Sep dozens were missing and two bodies had been found.",
                dead=2, missing_text="dozens"),
@@ -712,10 +712,8 @@ MORE = {
         R(13, "affected", "The slide debris on the hill road between Nyin Maw and Ti Zit still has to be cleared.",
           roles=["access"]),
     ],
-    "ka-det-nge": [
-        R(163, "fatal", "A rescue volunteer names Kadet Nge the worst hit, with the most deaths."),
-    ],
     "ka-det-nge-htein": [
+        R(163, "fatal", "A rescue volunteer names it the worst hit, with the most deaths."),
         R(270, "fatal", "31 houses completely destroyed; the buried ground covers about five football pitches, "
                         "starting beside the Kadet Nge hill monastery.", houses=31),
         R(262, "fatal", "Three more bodies found on 28 Sep, five in all; 13 people went missing in the slide on "
@@ -1258,7 +1256,7 @@ TIMELINE = [
          site="nyaw-pyin", en="No contact with Nyaw Pyin: phone and internet are down."),
     dict(t="2026-09-28T10:00", when="28 Sep, morning", area="Launglon", line=422, kind="toll",
          en="At least five bodies recovered in Launglon; dozens still missing. Rescuers have not reached "
-            "Kadet Nge, Ti Zit or Za Lut."),
+            "Kadet Nge [Htein], Ti Zit or Za Lut."),
     dict(t="2026-09-28T11:00", when="28 Sep", area="Thayetchaung", line=482, kind="access",
          site="ka-nyin-chaung", approx=True,
          en="The Ka Nyin Chaung bridge on Union Road No. 8 is destroyed; the Dawei–Myeik road is cut."),
@@ -1334,7 +1332,7 @@ QUOTES = [
          mm="တစ်ရွာလုံးလည်း ပင်လယ်ပြင်ကြီးလိုဖြစ်သွားပြီ။ လူတွေလည်း ညမအိပ်ရဲကြဘူး။ တောင်ပြိုမှာကြောက်နေကြတယ်",
          en="The whole village has turned into an open sea. People don't dare sleep at night. They're afraid "
             "of landslides."),
-    dict(site="ka-det-nge", line=656, by="Kadet Nge resident, 27 Sep",
+    dict(site="ka-det-nge-htein", line=656, by="Kadet Nge [Htein] resident, 27 Sep",
          mm="သေတဲ့သူတွေ မနည်းဘူး။ နှစ်လောင်းပဲ ထုတ်လို့ရသေးတယ်",
          en="So many are dead. We've only been able to bring out two bodies."),
     dict(site="poe-zar-pin", line=533, by="Zambu Thiri rescue team member, 27 Sep",
